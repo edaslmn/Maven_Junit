@@ -15,7 +15,7 @@ import java.time.Duration;
 public class Odev {
 
     WebDriver driver = new ChromeDriver();
-    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(25));
 
     @Test
     public void test01(){
@@ -28,7 +28,7 @@ public class Odev {
         Assertions.assertTrue(textBox.isDisplayed());
 
     //3. Enable butonuna tıklayın ve textbox etkin oluncaya kadar bekleyin
-        WebElement enableButonu = driver.findElement(By.xpath("//*[@onclick='swapCheckbox()']"));
+        WebElement enableButonu = driver.findElement(By.xpath("//*[.='Enable']"));
         enableButonu.click();
         wait.until(ExpectedConditions.elementToBeClickable(textBox));
 
