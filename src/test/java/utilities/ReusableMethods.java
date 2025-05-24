@@ -9,7 +9,7 @@ import java.util.Set;
 
 public class ReusableMethods {
 
-    public static void bekle(int saniye)  {
+    public static void bekle (int saniye)  {
 
         try {
             Thread.sleep(saniye*1000);
@@ -68,6 +68,13 @@ public class ReusableMethods {
         }
     }
 
+
+    public static String tableUrunBulma (String satir, String sutun){
+
+        String urun = "//tr["+satir+"]/td["+sutun+"]";
+
+        return urun;
+    }
 
 }
 
